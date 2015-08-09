@@ -12,14 +12,17 @@ namespace Norem
 {
     public partial class MainForm : Form
     {
+        private void InitializeDefaultValues()
+        {
+            ActiveControl = WelcomeLabel;
+            UsernameExtendedTextBox.Cue = Properties.Resources.DefaultUsernameTextBoxString;
+            PasswordExtendedTextBox.Password = true;
+            PasswordExtendedTextBox.Cue = Properties.Resources.DefaultPasswordTextBoxString;
+        }
         public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            InitializeDefaultValues();
         }
     }
 }
