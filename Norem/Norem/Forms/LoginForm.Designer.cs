@@ -1,6 +1,6 @@
 ﻿namespace Norem
 {
-    partial class MainForm
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -64,6 +64,7 @@
             this.LoginButton.TabStop = false;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // PasswordExtendedTextBox
             // 
@@ -93,7 +94,7 @@
             this.UsernameExtendedTextBox.TabIndex = 1;
             this.UsernameExtendedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // MainForm
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -104,7 +105,7 @@
             this.Controls.Add(this.PasswordExtendedTextBox);
             this.Controls.Add(this.UsernameExtendedTextBox);
             this.Controls.Add(this.WelcomeLabel);
-            this.Name = "MainForm";
+            this.Name = "LoginForm";
             this.Text = "Norem";
             this.ResumeLayout(false);
             this.PerformLayout();
