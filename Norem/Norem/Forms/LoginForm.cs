@@ -15,6 +15,9 @@ namespace Norem
             UsernameExtendedTextBox.Cue = Properties.Resources.DefaultUsernameTextBoxString;
             PasswordExtendedTextBox.Password = true;
             PasswordExtendedTextBox.Cue = Properties.Resources.DefaultPasswordTextBoxString;
+
+            LoginErrorLabel.Text = Properties.Resources.LoginErrorLabelString;
+            LoginErrorLabel.Visible = false;
         }
         public LoginForm()
         {
@@ -24,6 +27,8 @@ namespace Norem
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            // hide the login error message
+            LoginErrorLabel.Visible = false;
             // login logic
             if(UsernameExtendedTextBox.Text.Length > 16 || UsernameExtendedTextBox.Text.Length < 4 )
             {
@@ -37,6 +42,10 @@ namespace Norem
                 mainForm.Show();
                 mainForm.FormClosed += MainForm_FormClosed;
                 this.Hide();
+            }
+            else
+            {
+                LoginErrorLabel.Visible = true;
             }
         }
 

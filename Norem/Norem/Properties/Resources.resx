@@ -125,4 +125,8 @@
     <value>Username</value>
     <comment>Placeholder text for the username text box.</comment>
   </data>
+  <data name="LoginErrorLabelString" xml:space="preserve">
+    <value>There was a problem logging in.</value>
+    <comment>Error message to display upon login failure.</comment>
+  </data>
 </root>

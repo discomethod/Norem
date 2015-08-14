@@ -30,6 +30,18 @@ namespace Norem.Controllers
             m_Client.CookieContainer = m_CookieContainer;
         }
 
+        public bool CheckLogin()
+        {
+            // make a request to the login screen and look for the username
+            RestRequest loginRequest = new RestRequest(m_Constants.URLLogin);
+            RestResponse loginResponse = (RestResponse)m_Client.Execute(loginRequest);
+            HtmlDocument loginDoc = new HtmlDocument();
+            loginDoc.LoadHtml(loginResponse.Content);
+            string xpath = "//div[@class=\"myprofile_menu\"]/span[span=\"" + m_Username + "\"]";
+            var result = loginDoc.DocumentNode.SelectSingleNode(xpath);
+            return  result != null;
+        }
+
         public bool DoLogin(string password)
         {
             // first make a request to the login screen
@@ -49,10 +61,8 @@ namespace Norem.Controllers
             doLoginRequest.AddQueryParameter(loginHiddenToken.Attributes["name"].Value, loginHiddenToken.Attributes["value"].Value);
 
             IRestResponse doLoginResponse = m_Client.Execute(doLoginRequest);
-            System.IO.File.WriteAllText(@"out.txt", doLoginResponse.Content);
 
-            // var request = new RestRequest(m_Constants.URLLogin);)
-            return true;
+            return CheckLogin();
         }
     }
 }

@@ -32,6 +32,7 @@
             this.LoginButton = new System.Windows.Forms.Button();
             this.PasswordExtendedTextBox = new Norem.ExtendedTextBox();
             this.UsernameExtendedTextBox = new Norem.ExtendedTextBox();
+            this.LoginErrorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // WelcomeLabel
@@ -59,7 +60,7 @@
             this.LoginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LoginButton.Location = new System.Drawing.Point(12, 221);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(260, 33);
+            this.LoginButton.Size = new System.Drawing.Size(268, 33);
             this.LoginButton.TabIndex = 3;
             this.LoginButton.TabStop = false;
             this.LoginButton.Text = "Login";
@@ -76,7 +77,7 @@
             this.PasswordExtendedTextBox.Location = new System.Drawing.Point(12, 185);
             this.PasswordExtendedTextBox.Name = "PasswordExtendedTextBox";
             this.PasswordExtendedTextBox.Password = false;
-            this.PasswordExtendedTextBox.Size = new System.Drawing.Size(260, 29);
+            this.PasswordExtendedTextBox.Size = new System.Drawing.Size(268, 29);
             this.PasswordExtendedTextBox.TabIndex = 2;
             this.PasswordExtendedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -90,9 +91,22 @@
             this.UsernameExtendedTextBox.Location = new System.Drawing.Point(12, 148);
             this.UsernameExtendedTextBox.Name = "UsernameExtendedTextBox";
             this.UsernameExtendedTextBox.Password = false;
-            this.UsernameExtendedTextBox.Size = new System.Drawing.Size(260, 29);
+            this.UsernameExtendedTextBox.Size = new System.Drawing.Size(268, 29);
             this.UsernameExtendedTextBox.TabIndex = 1;
             this.UsernameExtendedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LoginErrorLabel
+            // 
+            this.LoginErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoginErrorLabel.AutoSize = true;
+            this.LoginErrorLabel.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginErrorLabel.ForeColor = System.Drawing.Color.Brown;
+            this.LoginErrorLabel.Location = new System.Drawing.Point(8, 124);
+            this.LoginErrorLabel.Name = "LoginErrorLabel";
+            this.LoginErrorLabel.Size = new System.Drawing.Size(266, 21);
+            this.LoginErrorLabel.TabIndex = 4;
+            this.LoginErrorLabel.Text = "There was a problem logging in.";
             // 
             // LoginForm
             // 
@@ -100,7 +114,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(292, 262);
+            this.Controls.Add(this.LoginErrorLabel);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.PasswordExtendedTextBox);
             this.Controls.Add(this.UsernameExtendedTextBox);
@@ -118,6 +133,7 @@
         private ExtendedTextBox UsernameExtendedTextBox;
         private ExtendedTextBox PasswordExtendedTextBox;
         private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.Label LoginErrorLabel;
     }
 }
 

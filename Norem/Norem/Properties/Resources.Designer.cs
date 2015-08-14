@@ -77,5 +77,14 @@ namespace Norem.Properties {
                 return ResourceManager.GetString("DefaultUsernameTextBoxString", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There was a problem logging in..
+        /// </summary>
+        internal static string LoginErrorLabelString {
+            get {
+                return ResourceManager.GetString("LoginErrorLabelString", resourceCulture);
+            }
+        }
     }
 }
