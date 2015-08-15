@@ -12,11 +12,11 @@ namespace Norem
         private void InitializeDefaultValues()
         {
             ActiveControl = WelcomeLabel;
-            UsernameExtendedTextBox.Cue = Properties.Resources.DefaultUsernameTextBoxString;
+            UsernameExtendedTextBox.Cue = Properties.Resources.DefaultUsernameTextBox;
             PasswordExtendedTextBox.Password = true;
-            PasswordExtendedTextBox.Cue = Properties.Resources.DefaultPasswordTextBoxString;
+            PasswordExtendedTextBox.Cue = Properties.Resources.DefaultPasswordTextBox;
 
-            LoginErrorLabel.Text = Properties.Resources.LoginErrorLabelString;
+            LoginErrorLabel.Text = Properties.Resources.LoginErrorLabel;
             LoginErrorLabel.Visible = false;
         }
         public LoginForm()
@@ -33,6 +33,7 @@ namespace Norem
             if(UsernameExtendedTextBox.Text.Length > 16 || UsernameExtendedTextBox.Text.Length < 4 )
             {
                 // username is invalid length
+                LoginErrorLabel.Visible = true;
                 return;
             }
             m_SessionManager = new SessionManager(UsernameExtendedTextBox.Text);

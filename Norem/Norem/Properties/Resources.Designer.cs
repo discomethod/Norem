@@ -63,27 +63,153 @@ namespace Norem.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
-        internal static string DefaultPasswordTextBoxString {
+        internal static string DefaultPasswordTextBox {
             get {
-                return ResourceManager.GetString("DefaultPasswordTextBoxString", resourceCulture);
+                return ResourceManager.GetString("DefaultPasswordTextBox", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Username.
         /// </summary>
-        internal static string DefaultUsernameTextBoxString {
+        internal static string DefaultUsernameTextBox {
             get {
-                return ResourceManager.GetString("DefaultUsernameTextBoxString", resourceCulture);
+                return ResourceManager.GetString("DefaultUsernameTextBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forglar Swamp.
+        /// </summary>
+        internal static string ForglarSwamp {
+            get {
+                return ResourceManager.GetString("ForglarSwamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forsaken Wastes.
+        /// </summary>
+        internal static string ForsakenWastes {
+            get {
+                return ResourceManager.GetString("ForsakenWastes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ironfist Stronghold.
+        /// </summary>
+        internal static string IronfistStronghold {
+            get {
+                return ResourceManager.GetString("IronfistStronghold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to K&apos;Thir Forest.
+        /// </summary>
+        internal static string KThirForest {
+            get {
+                return ResourceManager.GetString("KThirForest", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to There was a problem logging in..
         /// </summary>
-        internal static string LoginErrorLabelString {
+        internal static string LoginErrorLabel {
             get {
-                return ResourceManager.GetString("LoginErrorLabelString", resourceCulture);
+                return ResourceManager.GetString("LoginErrorLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Common.
+        /// </summary>
+        internal static string RarityCommon {
+            get {
+                return ResourceManager.GetString("RarityCommon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exotic.
+        /// </summary>
+        internal static string RarityExotic {
+            get {
+                return ResourceManager.GetString("RarityExotic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Legendary.
+        /// </summary>
+        internal static string RarityLegendary {
+            get {
+                return ResourceManager.GetString("RarityLegendary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limited.
+        /// </summary>
+        internal static string RarityLimited {
+            get {
+                return ResourceManager.GetString("RarityLimited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rare.
+        /// </summary>
+        internal static string RarityRare {
+            get {
+                return ResourceManager.GetString("RarityRare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uncommon.
+        /// </summary>
+        internal static string RarityUncommon {
+            get {
+                return ResourceManager.GetString("RarityUncommon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Savage Tundra.
+        /// </summary>
+        internal static string SavageTundra {
+            get {
+                return ResourceManager.GetString("SavageTundra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shattered Peaks.
+        /// </summary>
+        internal static string ShatteredPeaks {
+            get {
+                return ResourceManager.GetString("ShatteredPeaks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sundered Lands.
+        /// </summary>
+        internal static string SunderedLands {
+            get {
+                return ResourceManager.GetString("SunderedLands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Underdepths.
+        /// </summary>
+        internal static string Underdepths {
+            get {
+                return ResourceManager.GetString("Underdepths", resourceCulture);
             }
         }
     }
