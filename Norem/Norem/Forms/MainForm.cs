@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Norem.Forms
@@ -15,6 +9,13 @@ namespace Norem.Forms
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void MainForm_SizeChanged(object sender, EventArgs e)
+        {
+            ForgeLabel.Size = new Size(Size.Width / 2 - 8, ForgeLabel.Size.Height);
+            SacrificeLabel.Size = new Size(Size.Width / 2 - 8, SacrificeLabel.Size.Height);
+            SacrificeLabel.Location = new Point(Size.Width / 2 - 8, 0);
         }
     }
 }
