@@ -61,6 +61,7 @@
       <DependentUpon>ExtendedTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\RuneManager.cs" />
     <Compile Include="Controllers\SessionManager.cs" />
     <Compile Include="Controls\SacrificeControl.cs">
       <SubType>UserControl</SubType>

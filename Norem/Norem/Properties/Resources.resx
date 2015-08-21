@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Champion" xml:space="preserve">
+    <value>Champions</value>
+    <comment>Verbose name for "Champion" in JSON returned by Pox Nora.</comment>
+  </data>
   <data name="DefaultPasswordTextBox" xml:space="preserve">
     <value>Password</value>
     <comment>Placeholder text for the password text box.</comment>
@@ -124,6 +128,10 @@
   <data name="DefaultUsernameTextBox" xml:space="preserve">
     <value>Username</value>
     <comment>Placeholder text for the username text box.</comment>
+  </data>
+  <data name="Equipment" xml:space="preserve">
+    <value>Equipment</value>
+    <comment>Verbose name for "Equipment" in JSON returned by Pox Nora.</comment>
   </data>
   <data name="ForglarSwamp" xml:space="preserve">
     <value>Forglar Swamp</value>
@@ -169,6 +177,10 @@
     <value>Uncommon</value>
     <comment>Uncommon rarity.</comment>
   </data>
+  <data name="Relic" xml:space="preserve">
+    <value>Relics</value>
+    <comment>Verbose name for "Relic" in JSON returned by Pox Nora.</comment>
+  </data>
   <data name="SavageTundra" xml:space="preserve">
     <value>Savage Tundra</value>
     <comment>Savage Tundra faction name.</comment>
@@ -176,6 +188,10 @@
   <data name="ShatteredPeaks" xml:space="preserve">
     <value>Shattered Peaks</value>
     <comment>Shattered Peaks faction name.</comment>
+  </data>
+  <data name="Spell" xml:space="preserve">
+    <value>Spells</value>
+    <comment>Verbose name for "Spell" in JSON returned by Pox Nora.</comment>
   </data>
   <data name="SunderedLands" xml:space="preserve">
     <value>Sundered Lands</value>

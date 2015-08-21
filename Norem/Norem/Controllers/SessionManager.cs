@@ -15,6 +15,7 @@ namespace Norem.Controllers
         private Constants m_Constants = new Constants();
         private CookieContainer m_CookieContainer = new CookieContainer();
         private RestClient m_Client;
+        private RuneManager m_RuneManager = new RuneManager();
         private string m_Username;
 
         public string Username
@@ -63,6 +64,23 @@ namespace Norem.Controllers
             IRestResponse doLoginResponse = m_Client.Execute(doLoginRequest);
 
             return CheckLogin();
+        }
+
+        /// <summary> FetchGlobalData returns the json data from the "Rune Forge" page.
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public void FetchGlobalData()
+        {
+            // fetches all rune data from the Pox Nora rune forge
+            // generate epoch time
+            TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
+            int secondsSinceEpoch = (int)t.TotalSeconds;
+            // format 
+            RestRequest forgeRequest = new RestRequest(string.Format(m_Constants.URLFetchForge, secondsSinceEpoch));
+            RestResponse forgeResponse = (RestResponse) m_Client.Execute(forgeRequest);
+            File.WriteAllText("out.json", forgeResponse.Content);
+            return;
         }
     }
 }

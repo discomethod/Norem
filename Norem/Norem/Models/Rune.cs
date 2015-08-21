@@ -36,6 +36,13 @@ namespace Norem.Models
             set { m_Rarity = value; }
         }
 
+        private RuneType m_RuneType;
+        public RuneType RuneType
+        {
+            get { return m_RuneType; }
+            set { m_RuneType = value; }
+        }
+
         private string m_Name;
         public string Name
         {

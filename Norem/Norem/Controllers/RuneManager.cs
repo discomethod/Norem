@@ -8,5 +8,6 @@ namespace Norem.Controllers
 {
     class RuneManager
     {
+        
     }
 }

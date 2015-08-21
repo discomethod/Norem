@@ -61,6 +61,15 @@ namespace Norem.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Champions.
+        /// </summary>
+        internal static string Champion {
+            get {
+                return ResourceManager.GetString("Champion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string DefaultPasswordTextBox {
@@ -75,6 +84,15 @@ namespace Norem.Properties {
         internal static string DefaultUsernameTextBox {
             get {
                 return ResourceManager.GetString("DefaultUsernameTextBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Equipment.
+        /// </summary>
+        internal static string Equipment {
+            get {
+                return ResourceManager.GetString("Equipment", resourceCulture);
             }
         }
         
@@ -178,6 +196,15 @@ namespace Norem.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Relics.
+        /// </summary>
+        internal static string Relic {
+            get {
+                return ResourceManager.GetString("Relic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Savage Tundra.
         /// </summary>
         internal static string SavageTundra {
@@ -192,6 +219,15 @@ namespace Norem.Properties {
         internal static string ShatteredPeaks {
             get {
                 return ResourceManager.GetString("ShatteredPeaks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spells.
+        /// </summary>
+        internal static string Spell {
+            get {
+                return ResourceManager.GetString("Spell", resourceCulture);
             }
         }
         
