@@ -1,21 +1,22 @@
-﻿using System;
-using System.Drawing;
+﻿using Norem.Controllers;
+using System;
 using System.Windows.Forms;
 
 namespace Norem.Forms
 {
     public partial class MainForm : Form
     {
+        private SessionManager m_SesssionManager;
+        public SessionManager SessionManager { set { m_SesssionManager = value; } }
+
         public MainForm()
         {
             InitializeComponent();
         }
 
-        private void MainForm_SizeChanged(object sender, EventArgs e)
+        private void UpdateAllButton_Click(object sender, EventArgs e)
         {
-            ForgeLabel.Size = new Size(Size.Width / 2 - 8, ForgeLabel.Size.Height);
-            SacrificeLabel.Size = new Size(Size.Width / 2 - 8, SacrificeLabel.Size.Height);
-            SacrificeLabel.Location = new Point(Size.Width / 2 - 8, 0);
+            // TODO: fetch all runes
         }
     }
 }

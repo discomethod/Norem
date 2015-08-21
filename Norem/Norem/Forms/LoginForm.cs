@@ -40,9 +40,10 @@ namespace Norem
             if (m_SessionManager.DoLogin(PasswordExtendedTextBox.Text))
             {
                 MainForm mainForm = new MainForm();
+                mainForm.SessionManager = m_SessionManager;
                 mainForm.Show();
                 mainForm.FormClosed += MainForm_FormClosed;
-                this.Hide();
+                Hide();
             }
             else
             {

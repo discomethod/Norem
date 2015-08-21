@@ -30,8 +30,8 @@
         {
             this.SacrificeButton = new System.Windows.Forms.Button();
             this.SacrificeAllButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SacrificeDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.SacrificeDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // SacrificeButton
@@ -58,28 +58,28 @@
             this.SacrificeAllButton.Text = "Sacrifice All";
             this.SacrificeAllButton.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // SacrificeDataGridView
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SacrificeDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(217, 110);
-            this.dataGridView1.TabIndex = 2;
+            this.SacrificeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SacrificeDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.SacrificeDataGridView.Name = "SacrificeDataGridView";
+            this.SacrificeDataGridView.Size = new System.Drawing.Size(217, 110);
+            this.SacrificeDataGridView.TabIndex = 2;
             // 
             // SacrificeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.SacrificeDataGridView);
             this.Controls.Add(this.SacrificeAllButton);
             this.Controls.Add(this.SacrificeButton);
             this.Name = "SacrificeControl";
             this.Size = new System.Drawing.Size(217, 150);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SacrificeDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,6 +89,6 @@
 
         private System.Windows.Forms.Button SacrificeButton;
         private System.Windows.Forms.Button SacrificeAllButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView SacrificeDataGridView;
     }
 }
