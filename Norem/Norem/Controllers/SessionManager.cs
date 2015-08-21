@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Norem.Controllers
 {
-    class SessionManager
+    public class SessionManager
     {
         private Constants m_Constants = new Constants();
         private CookieContainer m_CookieContainer = new CookieContainer();

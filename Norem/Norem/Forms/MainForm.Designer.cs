@@ -31,15 +31,15 @@
             this.MainFormTabControl = new System.Windows.Forms.TabControl();
             this.ForgeTab = new System.Windows.Forms.TabPage();
             this.SacrificeTab = new System.Windows.Forms.TabPage();
+            this.SacrificeAllButton = new System.Windows.Forms.Button();
+            this.SacrificeButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.CollectionTab = new System.Windows.Forms.TabPage();
             this.UpdateAllButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.SacrificeButton = new System.Windows.Forms.Button();
-            this.SacrificeAllButton = new System.Windows.Forms.Button();
             this.MainFormTabControl.SuspendLayout();
             this.SacrificeTab.SuspendLayout();
-            this.CollectionTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.CollectionTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainFormTabControl
@@ -83,6 +83,39 @@
             this.SacrificeTab.Text = "Sacrifice";
             this.SacrificeTab.UseVisualStyleBackColor = true;
             // 
+            // SacrificeAllButton
+            // 
+            this.SacrificeAllButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SacrificeAllButton.AutoSize = true;
+            this.SacrificeAllButton.Location = new System.Drawing.Point(59, 285);
+            this.SacrificeAllButton.Name = "SacrificeAllButton";
+            this.SacrificeAllButton.Size = new System.Drawing.Size(112, 31);
+            this.SacrificeAllButton.TabIndex = 2;
+            this.SacrificeAllButton.Text = "Sacrifice All";
+            this.SacrificeAllButton.UseVisualStyleBackColor = true;
+            // 
+            // SacrificeButton
+            // 
+            this.SacrificeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SacrificeButton.AutoSize = true;
+            this.SacrificeButton.Location = new System.Drawing.Point(177, 285);
+            this.SacrificeButton.Name = "SacrificeButton";
+            this.SacrificeButton.Size = new System.Drawing.Size(89, 31);
+            this.SacrificeButton.TabIndex = 1;
+            this.SacrificeButton.Text = "Sacrifice";
+            this.SacrificeButton.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 7);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(259, 272);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // CollectionTab
             // 
             this.CollectionTab.Controls.Add(this.UpdateAllButton);
@@ -104,39 +137,7 @@
             this.UpdateAllButton.TabIndex = 0;
             this.UpdateAllButton.Text = "Update";
             this.UpdateAllButton.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(259, 272);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // SacrificeButton
-            // 
-            this.SacrificeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SacrificeButton.AutoSize = true;
-            this.SacrificeButton.Location = new System.Drawing.Point(177, 285);
-            this.SacrificeButton.Name = "SacrificeButton";
-            this.SacrificeButton.Size = new System.Drawing.Size(89, 31);
-            this.SacrificeButton.TabIndex = 1;
-            this.SacrificeButton.Text = "Sacrifice";
-            this.SacrificeButton.UseVisualStyleBackColor = true;
-            // 
-            // SacrificeAllButton
-            // 
-            this.SacrificeAllButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SacrificeAllButton.AutoSize = true;
-            this.SacrificeAllButton.Location = new System.Drawing.Point(59, 285);
-            this.SacrificeAllButton.Name = "SacrificeAllButton";
-            this.SacrificeAllButton.Size = new System.Drawing.Size(112, 31);
-            this.SacrificeAllButton.TabIndex = 2;
-            this.SacrificeAllButton.Text = "Sacrifice All";
-            this.SacrificeAllButton.UseVisualStyleBackColor = true;
+            this.UpdateAllButton.Click += new System.EventHandler(this.UpdateAllButton_Click);
             // 
             // MainForm
             // 
@@ -150,9 +151,9 @@
             this.MainFormTabControl.ResumeLayout(false);
             this.SacrificeTab.ResumeLayout(false);
             this.SacrificeTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.CollectionTab.ResumeLayout(false);
             this.CollectionTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
