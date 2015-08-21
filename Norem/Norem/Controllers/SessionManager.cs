@@ -16,6 +16,7 @@ namespace Norem.Controllers
     {
         private Constants m_Constants = new Constants();
         private CookieContainer m_CookieContainer = new CookieContainer();
+        private Dictionary<int, Faction> m_Factions = new Dictionary<int, Faction>();
         private RestClient m_Client;
         private RuneManager m_RuneManager = new RuneManager();
         private string m_Username;
@@ -83,6 +84,11 @@ namespace Norem.Controllers
             RestResponse forgeResponse = (RestResponse) m_Client.Execute(forgeRequest);
             PoxNoraForgeJSON parsedJSON = JsonConvert.DeserializeObject<PoxNoraForgeJSON>(forgeResponse.Content);
             
+            foreach(PoxNoraKeyValue item in parsedJSON.factions)
+            {
+                m_Factions.Add(item.id, FactionExt.ToFaction(item.value));
+            }
+
             return;
         }
     }
