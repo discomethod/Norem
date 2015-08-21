@@ -10,7 +10,7 @@ namespace Norem.Models
         ForsakenWastes,
         IronfistStronghold,
         SunderedLands,
-        KThirForest,
+        KthirForest,
         Underdepths,
         SavageTundra,
         ShatteredPeaks
@@ -25,7 +25,7 @@ namespace Norem.Models
                 case Faction.ForglarSwamp:          return Resources.ForglarSwamp;
                 case Faction.ForsakenWastes:        return Resources.ForsakenWastes;
                 case Faction.IronfistStronghold:    return Resources.IronfistStronghold;
-                case Faction.KThirForest:           return Resources.KThirForest;
+                case Faction.KthirForest:           return Resources.KthirForest;
                 case Faction.SavageTundra:          return Resources.SavageTundra;
                 case Faction.ShatteredPeaks:        return Resources.ShatteredPeaks;
                 case Faction.SunderedLands:         return Resources.SunderedLands;
@@ -34,19 +34,28 @@ namespace Norem.Models
             }
         }
 
-        public static Faction ToFaction(string value)
+        public static Faction ToFaction(string factionName)
         {
-            switch (value)
+            // use if...else rather than switch so we can compare to resource values
+            if (factionName == Resources.ForglarSwamp)
             {
-                case "Forglar Swamp":       return Faction.ForglarSwamp;
-                case "Forsaken Wastes":     return Faction.ForsakenWastes;
-                case "Ironfist Stronghold": return Faction.IronfistStronghold;
-                case "K'thir Forest":       return Faction.KThirForest;
-                case "Savage Tundra":       return Faction.SavageTundra;
-                case "Shattered Peaks":     return Faction.ShatteredPeaks;
-                case "Sundered Lands":      return Faction.SunderedLands;
-                case "Underdepths":         return Faction.Underdepths;
-                default: throw new ArgumentException("Faction matching \"" + value + "\"could not be found.", "value");
+                return Faction.ForglarSwamp;
+            } else if (factionName == Resources.ForsakenWastes) {
+                return Faction.ForsakenWastes;
+            } else if (factionName == Resources.IronfistStronghold) {
+                return Faction.IronfistStronghold;
+            } else if (factionName == Resources.KthirForest) {
+                return Faction.KthirForest;
+            } else if (factionName == Resources.SavageTundra) {
+                return Faction.SavageTundra;
+            } else if (factionName == Resources.ShatteredPeaks) {
+                return Faction.ShatteredPeaks;
+            } else if (factionName == Resources.SunderedLands) {
+                return Faction.SunderedLands;
+            } else if (factionName == Resources.Underdepths) {
+                return Faction.Underdepths;
+            } else {
+                throw new ArgumentException(String.Format("The faction name \"{0}\" could not be matched.", factionName), "value");
             }
         }
     }

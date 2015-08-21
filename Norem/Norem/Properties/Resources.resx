@@ -145,8 +145,8 @@
     <value>Ironfist Stronghold</value>
     <comment>Ironfist Stronghold faction name.</comment>
   </data>
-  <data name="KThirForest" xml:space="preserve">
-    <value>K'Thir Forest</value>
+  <data name="KthirForest" xml:space="preserve">
+    <value>K'thir Forest</value>
     <comment>K'Thir Forest faction name.</comment>
   </data>
   <data name="LoginErrorLabel" xml:space="preserve">

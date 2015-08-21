@@ -124,11 +124,11 @@ namespace Norem.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to K&apos;Thir Forest.
+        ///   Looks up a localized string similar to K&apos;thir Forest.
         /// </summary>
-        internal static string KThirForest {
+        internal static string KthirForest {
             get {
-                return ResourceManager.GetString("KThirForest", resourceCulture);
+                return ResourceManager.GetString("KthirForest", resourceCulture);
             }
         }
         
