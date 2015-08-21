@@ -16,7 +16,8 @@ namespace Norem.Controllers
     {
         private Constants m_Constants = new Constants();
         private CookieContainer m_CookieContainer = new CookieContainer();
-        private Dictionary<int, Faction> m_Factions = new Dictionary<int, Faction>();
+        private Dictionary<int, Faction> m_FactionMap = new Dictionary<int, Faction>();
+        private Dictionary<int, Rarity> m_RarityMap = new Dictionary<int, Rarity>();
         private RestClient m_Client;
         private RuneManager m_RuneManager = new RuneManager();
         private string m_Username;
@@ -84,10 +85,8 @@ namespace Norem.Controllers
             RestResponse forgeResponse = (RestResponse) m_Client.Execute(forgeRequest);
             PoxNoraForgeJSON parsedJSON = JsonConvert.DeserializeObject<PoxNoraForgeJSON>(forgeResponse.Content);
             
-            foreach(PoxNoraKeyValue item in parsedJSON.factions)
-            {
-                m_Factions.Add(item.id, FactionExt.ToFaction(item.value));
-            }
+            foreach (PoxNoraKeyValue item in parsedJSON.factions) m_FactionMap.Add(item.id, FactionExt.ToFaction(item.value));
+            foreach (PoxNoraKeyValue item in parsedJSON.rarities) m_RarityMap.Add(item.id, RarityExt.ToRarity(item.value));
 
             return;
         }
