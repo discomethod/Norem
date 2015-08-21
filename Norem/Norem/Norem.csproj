@@ -62,12 +62,6 @@
     </Compile>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\SessionManager.cs" />
-    <Compile Include="Controls\CollectionControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\CollectionControl.Designer.cs">
-      <DependentUpon>CollectionControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\SacrificeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,9 +87,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Components\ExtendedTextBox.resx">
       <DependentUpon>ExtendedTextBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\CollectionControl.resx">
-      <DependentUpon>CollectionControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\SacrificeControl.resx">
       <DependentUpon>SacrificeControl.cs</DependentUpon>
