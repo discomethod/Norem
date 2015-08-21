@@ -1,4 +1,6 @@
 ﻿using HtmlAgilityPack;
+using Newtonsoft.Json;
+using Norem.Models;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -79,7 +81,8 @@ namespace Norem.Controllers
             // format 
             RestRequest forgeRequest = new RestRequest(string.Format(m_Constants.URLFetchForge, secondsSinceEpoch));
             RestResponse forgeResponse = (RestResponse) m_Client.Execute(forgeRequest);
-            File.WriteAllText("out.json", forgeResponse.Content);
+            PoxNoraForgeJSON parsedJSON = JsonConvert.DeserializeObject<PoxNoraForgeJSON>(forgeResponse.Content);
+            
             return;
         }
     }
