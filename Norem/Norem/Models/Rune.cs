@@ -3,7 +3,7 @@
 namespace Norem.Models
 {
    
-    class Rune
+    public class Rune
     {
         private List<Faction> m_Factions;
         public List<Faction> Factions

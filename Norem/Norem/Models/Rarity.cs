@@ -26,31 +26,31 @@ namespace Norem.Models
                 case Rarity.Exotic: return Resources.RarityExotic;
                 case Rarity.Legendary: return Resources.RarityLegendary;
                 case Rarity.Limited: return Resources.RarityLimited;
-                default: throw new InvalidEnumArgumentException("rarity", (int)rarity, typeof(Rarity));
+                default: throw new InvalidEnumArgumentException(nameof(rarity), (int)rarity, typeof(Rarity));
             }
         }
 
-        public static Rarity ToRarity(string rarity)
+        public static Rarity ToRarity(string pnRarity)
         {
-            if (rarity == Resources.RarityCommon)
+            if (pnRarity == Resources.RarityCommon)
             {
                 return Rarity.Common;
-            } else if (rarity == Resources.RarityUncommon)
+            } else if (pnRarity == Resources.RarityUncommon)
             {
                 return Rarity.Uncommon;
-            } else if (rarity == Resources.RarityRare)
+            } else if (pnRarity == Resources.RarityRare)
             {
                 return Rarity.Rare;
-            } else if (rarity == Resources.RarityExotic)
+            } else if (pnRarity == Resources.RarityExotic)
             {
                 return Rarity.Exotic;
-            } else if (rarity == Resources.RarityLegendary)
+            } else if (pnRarity == Resources.RarityLegendary)
             { 
                 return Rarity.Legendary;
             }
             else
             {
-                throw new ArgumentException(String.Format("The value \"{0}\" does not correspond to a rarity.", rarity),"rarity");
+                throw new ArgumentException($"The value \"{pnRarity}\" does not correspond to a rarity.",nameof(pnRarity));
             }
         }
     }

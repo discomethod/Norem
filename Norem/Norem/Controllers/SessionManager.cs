@@ -16,11 +16,20 @@ namespace Norem.Controllers
     {
         private Constants m_Constants = new Constants();
         private CookieContainer m_CookieContainer = new CookieContainer();
+        /// <summary>
+        /// FactionMap maps a Pox Nora integer (key) to the corresponding Norem Faction enumeration (value).
+        /// </summary>
         private Dictionary<int, Faction> m_FactionMap = new Dictionary<int, Faction>();
         private Dictionary<int, Rarity> m_RarityMap = new Dictionary<int, Rarity>();
+        private List<Rune> m_Runes = new List<Rune>(); 
         private RestClient m_Client;
-        private RuneManager m_RuneManager = new RuneManager();
         private string m_Username;
+
+        public List<Rune> Runes
+        {
+            get { return m_Runes; }
+            set { m_Runes = new List<Rune>(value); }
+        } 
 
         public string Username
         {
@@ -42,7 +51,7 @@ namespace Norem.Controllers
             RestResponse loginResponse = (RestResponse)m_Client.Execute(loginRequest);
             HtmlDocument loginDoc = new HtmlDocument();
             loginDoc.LoadHtml(loginResponse.Content);
-            string xpath = "//div[@class=\"myprofile_menu\"]/span[span=\"" + m_Username + "\"]";
+            string xpath = $"//div[@class=\"myprofile_menu\"]/span[span=\"{m_Username}\"]";
             var result = loginDoc.DocumentNode.SelectSingleNode(xpath);
             return  result != null;
         }
@@ -84,10 +93,21 @@ namespace Norem.Controllers
             RestRequest forgeRequest = new RestRequest(string.Format(m_Constants.URLFetchForge, secondsSinceEpoch));
             RestResponse forgeResponse = (RestResponse) m_Client.Execute(forgeRequest);
             PoxNoraForgeJSON parsedJSON = JsonConvert.DeserializeObject<PoxNoraForgeJSON>(forgeResponse.Content);
-            
+
             foreach (PoxNoraKeyValue item in parsedJSON.factions) m_FactionMap.Add(item.id, FactionExt.ToFaction(item.value));
             foreach (PoxNoraKeyValue item in parsedJSON.rarities) m_RarityMap.Add(item.id, RarityExt.ToRarity(item.value));
 
+            foreach (PoxNoraRune item in parsedJSON.spells)
+            {
+                // create a Rune object by populating it with data from the PoxNoraRune object
+                Rune r = new Rune
+                {
+                    Name = item.Name,
+                    Factions = new List<Faction>(item.Factions.Select(faction => m_FactionMap[faction])),
+                    Rarity = m_RarityMap[item.Rarity],
+                };
+                m_Runes.Add(r);
+            }
             return;
         }
     }

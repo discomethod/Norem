@@ -18,6 +18,7 @@ namespace Norem.Forms
         {
             // TODO: fetch all runes
             m_SesssionManager.FetchGlobalData();
+            runeBindingSource.DataSource = m_SesssionManager.Runes;
         }
     }
 }

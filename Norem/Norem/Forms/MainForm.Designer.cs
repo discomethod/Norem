@@ -28,18 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainFormTabControl = new System.Windows.Forms.TabControl();
             this.ForgeTab = new System.Windows.Forms.TabPage();
             this.SacrificeTab = new System.Windows.Forms.TabPage();
             this.SacrificeAllButton = new System.Windows.Forms.Button();
             this.SacrificeButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.SacrificeDataGridView = new System.Windows.Forms.DataGridView();
             this.CollectionTab = new System.Windows.Forms.TabPage();
             this.UpdateAllButton = new System.Windows.Forms.Button();
+            this.runeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rarityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainFormTabControl.SuspendLayout();
             this.SacrificeTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SacrificeDataGridView)).BeginInit();
             this.CollectionTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.runeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // MainFormTabControl
@@ -73,7 +79,7 @@
             // 
             this.SacrificeTab.Controls.Add(this.SacrificeAllButton);
             this.SacrificeTab.Controls.Add(this.SacrificeButton);
-            this.SacrificeTab.Controls.Add(this.dataGridView1);
+            this.SacrificeTab.Controls.Add(this.SacrificeDataGridView);
             this.SacrificeTab.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SacrificeTab.Location = new System.Drawing.Point(4, 34);
             this.SacrificeTab.Name = "SacrificeTab";
@@ -105,16 +111,23 @@
             this.SacrificeButton.Text = "Sacrifice";
             this.SacrificeButton.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // SacrificeDataGridView
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SacrificeDataGridView.AllowUserToAddRows = false;
+            this.SacrificeDataGridView.AllowUserToDeleteRows = false;
+            this.SacrificeDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(259, 272);
-            this.dataGridView1.TabIndex = 0;
+            this.SacrificeDataGridView.AutoGenerateColumns = false;
+            this.SacrificeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SacrificeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn,
+            this.rarityDataGridViewTextBoxColumn});
+            this.SacrificeDataGridView.DataSource = this.runeBindingSource;
+            this.SacrificeDataGridView.Location = new System.Drawing.Point(7, 7);
+            this.SacrificeDataGridView.Name = "SacrificeDataGridView";
+            this.SacrificeDataGridView.Size = new System.Drawing.Size(259, 272);
+            this.SacrificeDataGridView.TabIndex = 0;
             // 
             // CollectionTab
             // 
@@ -139,6 +152,24 @@
             this.UpdateAllButton.UseVisualStyleBackColor = true;
             this.UpdateAllButton.Click += new System.EventHandler(this.UpdateAllButton_Click);
             // 
+            // runeBindingSource
+            // 
+            this.runeBindingSource.DataSource = typeof(Norem.Models.Rune);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // rarityDataGridViewTextBoxColumn
+            // 
+            this.rarityDataGridViewTextBoxColumn.DataPropertyName = "Rarity";
+            this.rarityDataGridViewTextBoxColumn.HeaderText = "Rarity";
+            this.rarityDataGridViewTextBoxColumn.Name = "rarityDataGridViewTextBoxColumn";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,9 +182,10 @@
             this.MainFormTabControl.ResumeLayout(false);
             this.SacrificeTab.ResumeLayout(false);
             this.SacrificeTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SacrificeDataGridView)).EndInit();
             this.CollectionTab.ResumeLayout(false);
             this.CollectionTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.runeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,6 +199,9 @@
         private System.Windows.Forms.Button UpdateAllButton;
         private System.Windows.Forms.Button SacrificeAllButton;
         private System.Windows.Forms.Button SacrificeButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView SacrificeDataGridView;
+        private System.Windows.Forms.BindingSource runeBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rarityDataGridViewTextBoxColumn;
     }
 }
