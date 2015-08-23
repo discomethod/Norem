@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainFormTabControl = new System.Windows.Forms.TabControl();
             this.ForgeTab = new System.Windows.Forms.TabPage();
             this.SacrificeTab = new System.Windows.Forms.TabPage();
@@ -38,9 +39,11 @@
             this.SacrificeDataGridView = new System.Windows.Forms.DataGridView();
             this.CollectionTab = new System.Windows.Forms.TabPage();
             this.UpdateAllButton = new System.Windows.Forms.Button();
-            this.runeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RuneTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rarityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.runeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MainFormTabControl.SuspendLayout();
             this.SacrificeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SacrificeDataGridView)).BeginInit();
@@ -61,7 +64,7 @@
             this.MainFormTabControl.Location = new System.Drawing.Point(2, 3);
             this.MainFormTabControl.Name = "MainFormTabControl";
             this.MainFormTabControl.SelectedIndex = 0;
-            this.MainFormTabControl.Size = new System.Drawing.Size(280, 357);
+            this.MainFormTabControl.Size = new System.Drawing.Size(369, 483);
             this.MainFormTabControl.TabIndex = 0;
             // 
             // ForgeTab
@@ -70,7 +73,7 @@
             this.ForgeTab.Location = new System.Drawing.Point(4, 34);
             this.ForgeTab.Name = "ForgeTab";
             this.ForgeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ForgeTab.Size = new System.Drawing.Size(272, 319);
+            this.ForgeTab.Size = new System.Drawing.Size(361, 445);
             this.ForgeTab.TabIndex = 0;
             this.ForgeTab.Text = "Forge";
             this.ForgeTab.UseVisualStyleBackColor = true;
@@ -84,7 +87,7 @@
             this.SacrificeTab.Location = new System.Drawing.Point(4, 34);
             this.SacrificeTab.Name = "SacrificeTab";
             this.SacrificeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.SacrificeTab.Size = new System.Drawing.Size(272, 319);
+            this.SacrificeTab.Size = new System.Drawing.Size(361, 445);
             this.SacrificeTab.TabIndex = 1;
             this.SacrificeTab.Text = "Sacrifice";
             this.SacrificeTab.UseVisualStyleBackColor = true;
@@ -93,7 +96,7 @@
             // 
             this.SacrificeAllButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SacrificeAllButton.AutoSize = true;
-            this.SacrificeAllButton.Location = new System.Drawing.Point(59, 285);
+            this.SacrificeAllButton.Location = new System.Drawing.Point(148, 411);
             this.SacrificeAllButton.Name = "SacrificeAllButton";
             this.SacrificeAllButton.Size = new System.Drawing.Size(112, 31);
             this.SacrificeAllButton.TabIndex = 2;
@@ -104,7 +107,7 @@
             // 
             this.SacrificeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SacrificeButton.AutoSize = true;
-            this.SacrificeButton.Location = new System.Drawing.Point(177, 285);
+            this.SacrificeButton.Location = new System.Drawing.Point(266, 411);
             this.SacrificeButton.Name = "SacrificeButton";
             this.SacrificeButton.Size = new System.Drawing.Size(89, 31);
             this.SacrificeButton.TabIndex = 1;
@@ -122,11 +125,21 @@
             this.SacrificeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SacrificeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
+            this.RuneTypeDataGridViewTextBoxColumn,
             this.rarityDataGridViewTextBoxColumn});
             this.SacrificeDataGridView.DataSource = this.runeBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SacrificeDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.SacrificeDataGridView.Location = new System.Drawing.Point(7, 7);
             this.SacrificeDataGridView.Name = "SacrificeDataGridView";
-            this.SacrificeDataGridView.Size = new System.Drawing.Size(259, 272);
+            this.SacrificeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.SacrificeDataGridView.Size = new System.Drawing.Size(348, 398);
             this.SacrificeDataGridView.TabIndex = 0;
             // 
             // CollectionTab
@@ -135,7 +148,7 @@
             this.CollectionTab.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CollectionTab.Location = new System.Drawing.Point(4, 34);
             this.CollectionTab.Name = "CollectionTab";
-            this.CollectionTab.Size = new System.Drawing.Size(272, 319);
+            this.CollectionTab.Size = new System.Drawing.Size(361, 445);
             this.CollectionTab.TabIndex = 2;
             this.CollectionTab.Text = "Collection";
             this.CollectionTab.UseVisualStyleBackColor = true;
@@ -144,7 +157,7 @@
             // 
             this.UpdateAllButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.UpdateAllButton.AutoSize = true;
-            this.UpdateAllButton.Location = new System.Drawing.Point(188, 282);
+            this.UpdateAllButton.Location = new System.Drawing.Point(277, 408);
             this.UpdateAllButton.Name = "UpdateAllButton";
             this.UpdateAllButton.Size = new System.Drawing.Size(78, 31);
             this.UpdateAllButton.TabIndex = 0;
@@ -152,30 +165,49 @@
             this.UpdateAllButton.UseVisualStyleBackColor = true;
             this.UpdateAllButton.Click += new System.EventHandler(this.UpdateAllButton_Click);
             // 
-            // runeBindingSource
+            // dataGridViewTextBoxColumn1
             // 
-            this.runeBindingSource.DataSource = typeof(Norem.Models.Rune);
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "RuneType";
+            this.dataGridViewTextBoxColumn1.HeaderText = "RuneType";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 82;
             // 
             // nameDataGridViewTextBoxColumn
             // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // RuneTypeDataGridViewTextBoxColumn
+            // 
+            this.RuneTypeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.RuneTypeDataGridViewTextBoxColumn.DataPropertyName = "RuneType";
+            this.RuneTypeDataGridViewTextBoxColumn.HeaderText = "RuneType";
+            this.RuneTypeDataGridViewTextBoxColumn.Name = "RuneTypeDataGridViewTextBoxColumn";
+            this.RuneTypeDataGridViewTextBoxColumn.Width = 118;
             // 
             // rarityDataGridViewTextBoxColumn
             // 
             this.rarityDataGridViewTextBoxColumn.DataPropertyName = "Rarity";
             this.rarityDataGridViewTextBoxColumn.HeaderText = "Rarity";
             this.rarityDataGridViewTextBoxColumn.Name = "rarityDataGridViewTextBoxColumn";
+            this.rarityDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // runeBindingSource
+            // 
+            this.runeBindingSource.DataSource = typeof(Norem.Models.Rune);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(284, 362);
+            this.ClientSize = new System.Drawing.Size(373, 488);
             this.Controls.Add(this.MainFormTabControl);
             this.Name = "MainForm";
             this.Text = "MainForm";
@@ -202,6 +234,8 @@
         private System.Windows.Forms.DataGridView SacrificeDataGridView;
         private System.Windows.Forms.BindingSource runeBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RuneTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rarityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }

@@ -4,6 +4,7 @@ using Norem.Models;
 using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -94,10 +95,10 @@ namespace Norem.Controllers
             RestResponse forgeResponse = (RestResponse) m_Client.Execute(forgeRequest);
             PoxNoraForgeJSON parsedJSON = JsonConvert.DeserializeObject<PoxNoraForgeJSON>(forgeResponse.Content);
 
-            foreach (PoxNoraKeyValue item in parsedJSON.factions) m_FactionMap.Add(item.id, FactionExt.ToFaction(item.value));
-            foreach (PoxNoraKeyValue item in parsedJSON.rarities) m_RarityMap.Add(item.id, RarityExt.ToRarity(item.value));
+            foreach (PoxNoraKeyValue item in parsedJSON.Factions) m_FactionMap.Add(item.ID, FactionExt.ToFaction(item.Value));
+            foreach (PoxNoraKeyValue item in parsedJSON.Rarities) m_RarityMap.Add(item.ID, RarityExt.ToRarity(item.Value));
 
-            foreach (PoxNoraRune item in parsedJSON.spells)
+            foreach (PoxNoraRune item in parsedJSON.Champions)
             {
                 // create a Rune object by populating it with data from the PoxNoraRune object
                 Rune r = new Rune
@@ -105,6 +106,43 @@ namespace Norem.Controllers
                     Name = item.Name,
                     Factions = new List<Faction>(item.Factions.Select(faction => m_FactionMap[faction])),
                     Rarity = m_RarityMap[item.Rarity],
+                    RuneType = RuneType.Champion,
+                };
+                m_Runes.Add(r);
+            }
+            foreach (PoxNoraRune item in parsedJSON.Spells)
+            {
+                // create a Rune object by populating it with data from the PoxNoraRune object
+                Rune r = new Rune
+                {
+                    Name = item.Name,
+                    Factions = new List<Faction>(item.Factions.Select(faction => m_FactionMap[faction])),
+                    Rarity = m_RarityMap[item.Rarity],
+                    RuneType = RuneType.Spell,
+                };
+                m_Runes.Add(r);
+            }
+            foreach (PoxNoraRune item in parsedJSON.Relics)
+            {
+                // create a Rune object by populating it with data from the PoxNoraRune object
+                Rune r = new Rune
+                {
+                    Name = item.Name,
+                    Factions = new List<Faction>(item.Factions.Select(faction => m_FactionMap[faction])),
+                    Rarity = m_RarityMap[item.Rarity],
+                    RuneType = RuneType.Relic,
+                };
+                m_Runes.Add(r);
+            }
+            foreach (PoxNoraRune item in parsedJSON.Equipment)
+            {
+                // create a Rune object by populating it with data from the PoxNoraRune object
+                Rune r = new Rune
+                {
+                    Name = item.Name,
+                    Factions = new List<Faction>(item.Factions.Select(faction => m_FactionMap[faction])),
+                    Rarity = m_RarityMap[item.Rarity],
+                    RuneType = RuneType.Equipment,
                 };
                 m_Runes.Add(r);
             }
