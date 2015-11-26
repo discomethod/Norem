@@ -31,24 +31,25 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MainFormTabControl = new System.Windows.Forms.TabControl();
             this.ForgeTab = new System.Windows.Forms.TabPage();
             this.SacrificeTab = new System.Windows.Forms.TabPage();
             this.SacrificeAllButton = new System.Windows.Forms.Button();
             this.SacrificeButton = new System.Windows.Forms.Button();
             this.SacrificeDataGridView = new System.Windows.Forms.DataGridView();
-            this.CollectionTab = new System.Windows.Forms.TabPage();
-            this.UpdateAllButton = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RuneTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rarityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.runeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CollectionTab = new System.Windows.Forms.TabPage();
+            this.UpdateAllButton = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainFormTabControl.SuspendLayout();
             this.SacrificeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SacrificeDataGridView)).BeginInit();
-            this.CollectionTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.runeBindingSource)).BeginInit();
+            this.CollectionTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainFormTabControl
@@ -142,37 +143,6 @@
             this.SacrificeDataGridView.Size = new System.Drawing.Size(348, 398);
             this.SacrificeDataGridView.TabIndex = 0;
             // 
-            // CollectionTab
-            // 
-            this.CollectionTab.Controls.Add(this.UpdateAllButton);
-            this.CollectionTab.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CollectionTab.Location = new System.Drawing.Point(4, 34);
-            this.CollectionTab.Name = "CollectionTab";
-            this.CollectionTab.Size = new System.Drawing.Size(361, 445);
-            this.CollectionTab.TabIndex = 2;
-            this.CollectionTab.Text = "Collection";
-            this.CollectionTab.UseVisualStyleBackColor = true;
-            // 
-            // UpdateAllButton
-            // 
-            this.UpdateAllButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.UpdateAllButton.AutoSize = true;
-            this.UpdateAllButton.Location = new System.Drawing.Point(277, 408);
-            this.UpdateAllButton.Name = "UpdateAllButton";
-            this.UpdateAllButton.Size = new System.Drawing.Size(78, 31);
-            this.UpdateAllButton.TabIndex = 0;
-            this.UpdateAllButton.Text = "Update";
-            this.UpdateAllButton.UseVisualStyleBackColor = true;
-            this.UpdateAllButton.Click += new System.EventHandler(this.UpdateAllButton_Click);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "RuneType";
-            this.dataGridViewTextBoxColumn1.HeaderText = "RuneType";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 82;
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -202,6 +172,36 @@
             // 
             this.runeBindingSource.DataSource = typeof(Norem.Models.Rune);
             // 
+            // CollectionTab
+            // 
+            this.CollectionTab.Controls.Add(this.UpdateAllButton);
+            this.CollectionTab.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CollectionTab.Location = new System.Drawing.Point(4, 34);
+            this.CollectionTab.Name = "CollectionTab";
+            this.CollectionTab.Size = new System.Drawing.Size(361, 445);
+            this.CollectionTab.TabIndex = 2;
+            this.CollectionTab.Text = "Collection";
+            this.CollectionTab.UseVisualStyleBackColor = true;
+            // 
+            // UpdateAllButton
+            // 
+            this.UpdateAllButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.UpdateAllButton.AutoSize = true;
+            this.UpdateAllButton.Location = new System.Drawing.Point(277, 408);
+            this.UpdateAllButton.Name = "UpdateAllButton";
+            this.UpdateAllButton.Size = new System.Drawing.Size(78, 31);
+            this.UpdateAllButton.TabIndex = 0;
+            this.UpdateAllButton.Text = "Update";
+            this.UpdateAllButton.UseVisualStyleBackColor = true;
+            this.UpdateAllButton.Click += new System.EventHandler(this.UpdateAllButton_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "RuneType";
+            this.dataGridViewTextBoxColumn1.HeaderText = "RuneType";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,15 +209,16 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(373, 488);
             this.Controls.Add(this.MainFormTabControl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.MainFormTabControl.ResumeLayout(false);
             this.SacrificeTab.ResumeLayout(false);
             this.SacrificeTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SacrificeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.runeBindingSource)).EndInit();
             this.CollectionTab.ResumeLayout(false);
             this.CollectionTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.runeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

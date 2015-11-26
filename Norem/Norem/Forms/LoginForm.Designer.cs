@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.WelcomeLabel = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
             this.PasswordExtendedTextBox = new Norem.ExtendedTextBox();
@@ -120,6 +121,7 @@
             this.Controls.Add(this.PasswordExtendedTextBox);
             this.Controls.Add(this.UsernameExtendedTextBox);
             this.Controls.Add(this.WelcomeLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.Text = "Norem";
             this.ResumeLayout(false);
