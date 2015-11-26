@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
+using RestSharp;
 
 namespace Norem.Models
 {
@@ -14,6 +16,14 @@ namespace Norem.Models
         public bool InFaction(Faction faction)
         {
             return m_Factions.Contains(faction);
+        }
+
+        private int m_BaseID;
+
+        public int BaseID
+        {
+            get { return m_BaseID; }
+            set { m_BaseID = value; }
         }
 
         private int m_DeckLimit;
@@ -48,6 +58,16 @@ namespace Norem.Models
         {
             get { return m_Name; }
             set { m_Name = value; }
+        }
+
+        /// <summary>
+        /// Retreive the "Trade In" and "Trade Out" forge nora values for this rune.
+        /// </summary>
+        public void GetForgeValues(RestClient client)
+        {
+            RestRequest launchForgeRequest = new RestRequest(string.Format(Constants.URLLaunchForge, BaseID, RuneTypeExt.ToPoxNoraIdentifier(RuneType)));
+            RestResponse launchForgeResponse = (RestResponse)client.Execute(launchForgeRequest);
+            return;
         }
     }
 }

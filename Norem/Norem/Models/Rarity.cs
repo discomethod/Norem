@@ -26,7 +26,7 @@ namespace Norem.Models
                 case Rarity.Exotic: return Resources.RarityExotic;
                 case Rarity.Legendary: return Resources.RarityLegendary;
                 case Rarity.Limited: return Resources.RarityLimited;
-                default: throw new InvalidEnumArgumentException(nameof(rarity), (int)rarity, typeof(Rarity));
+                default: throw new InvalidEnumArgumentException("rarity", (int)rarity, typeof(Rarity));
             }
         }
 
@@ -50,7 +50,7 @@ namespace Norem.Models
             }
             else
             {
-                throw new ArgumentException($"The value \"{pnRarity}\" does not correspond to a rarity.",nameof(pnRarity));
+                throw new ArgumentException("The value \"{pnRarity}\" does not correspond to a rarity.","pnRarity");
             }
         }
     }
