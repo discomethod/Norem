@@ -142,6 +142,42 @@ namespace Norem.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to c.
+        /// </summary>
+        internal static string PoxNoraChampion {
+            get {
+                return ResourceManager.GetString("PoxNoraChampion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to e.
+        /// </summary>
+        internal static string PoxNoraEquipment {
+            get {
+                return ResourceManager.GetString("PoxNoraEquipment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to r.
+        /// </summary>
+        internal static string PoxNoraRelic {
+            get {
+                return ResourceManager.GetString("PoxNoraRelic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to s.
+        /// </summary>
+        internal static string PoxNoraSpell {
+            get {
+                return ResourceManager.GetString("PoxNoraSpell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Common.
         /// </summary>
         internal static string RarityCommon {

@@ -153,6 +153,22 @@
     <value>There was a problem logging in.</value>
     <comment>Error message to display upon login failure.</comment>
   </data>
+  <data name="PoxNoraChampion" xml:space="preserve">
+    <value>c</value>
+    <comment>Character used by Pox Nora to identify the Champion rune type.</comment>
+  </data>
+  <data name="PoxNoraEquipment" xml:space="preserve">
+    <value>e</value>
+    <comment>Character used by Pox Nora to identify the Equipment rune type.</comment>
+  </data>
+  <data name="PoxNoraRelic" xml:space="preserve">
+    <value>r</value>
+    <comment>Character used by Pox Nora to identify the Relic rune type.</comment>
+  </data>
+  <data name="PoxNoraSpell" xml:space="preserve">
+    <value>s</value>
+    <comment>Character used by Pox Nora to identify the Spell rune type.</comment>
+  </data>
   <data name="RarityCommon" xml:space="preserve">
     <value>Common</value>
     <comment>Common rarity.</comment>
